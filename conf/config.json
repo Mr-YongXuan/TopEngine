@@ -1,0 +1,33 @@
+{
+  "RootPath": "html",
+  "IndexPage": ["index.html", "index.htm"],
+  "ServerName": "TopEngine/Willow => Early Access",
+  "ServerList": [
+    {
+      "Host": "localhost",
+      "Addr": "127.0.0.1",
+      "Port": 8080,
+      "Root": "html",
+      "IndexPage": ["index.html"],
+      "RouterGroup": ["test"],
+      "Charset": "utf-8",
+      "Cert": false
+    },
+    {
+      "Host": "localhost",
+      "Addr": "127.0.0.1",
+      "Port": 8081,
+      "Root": "html",
+      "IndexPage": ["index.html"],
+      "RouterGroup": ["test"],
+      "Charset": "utf-8",
+      "Cert": false,
+      "CertCRT": "conf/server.pem",
+      "CertKEY": "conf/server.key"
+    }
+  ],
+  "ErrorPage": "<html>\n<head>\n  <title>%s</title>\n</head>\n<body>\n  <center><h1>%s</h1></center>\n  <hr>\n  <center>%s</center>\n</body>\n</html>",
+  "Cluster": {
+    "MultiCast": "224.0.0.2"
+  }
+}
